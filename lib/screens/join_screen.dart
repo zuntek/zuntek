@@ -34,8 +34,8 @@ class _joinState extends State<join> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 60,
-            vertical: 30,
+            horizontal: 20,
+            vertical: 60,
           ),
           child: Column(children: [
             const Text(
@@ -56,7 +56,7 @@ class _joinState extends State<join> {
             DOBInputField(
                 inputDecoration: const InputDecoration(),
                 dateFormatType: DateFormatType.DDMMYYYY,
-                initialDate: DateTime(1),
+                initialDate: DateTime(2000, 1, 31),
                 lastDate: DateTime.now(),
                 firstDate: DateTime(0),
                 onDateSubmitted: (DateTime value) {}),
@@ -84,7 +84,7 @@ class _joinState extends State<join> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
+                backgroundColor: Colors.white,
                 textStyle: const TextStyle(
                   color: Colors.white,
                 ),
@@ -149,7 +149,7 @@ class _joinState extends State<join> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
+                    backgroundColor: Colors.white,
                   ),
                   onPressed: () => print('next page'),
                   child: const Icon(Icons.arrow_forward_ios_sharp),

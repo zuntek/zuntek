@@ -4,7 +4,7 @@ import 'package:zuntek/screens/join_screen.dart';
 import 'package:zuntek/screens/login_screen.dart';
 
 void main() {
-  runApp(const login());
+  runApp(const join());
 }
 /*
 class App extends StatelessWidget {

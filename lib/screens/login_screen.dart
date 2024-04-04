@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:zuntek/screens/home_screen.dart';
-import 'package:zuntek/services/api_service.dart';
-import 'package:flutter/widgets.dart';
-import 'package:zuntek/widgets/Button.dart';
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -32,7 +28,7 @@ class _loginState extends State<login> {
       body: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 60,
-          horizontal: 30,
+          horizontal: 10,
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(
@@ -101,59 +97,65 @@ class _loginState extends State<login> {
           const SizedBox(
             height: 50,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                '아이디나 비밀번호를 잊어버리셨나요?',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+              vertical: 10,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  '아이디나 비밀번호를 잊어버리셨나요?',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        textStyle: const TextStyle(
-                          color: Colors.amber,
-                        )),
-                    onPressed: () => print('next page'),
-                    child: const Text('회원가입'),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        textStyle: const TextStyle(
-                          color: Colors.amber,
-                        )),
-                    onPressed: () => print('next page'),
-                    child: const Text('아이디 찾기'),
-                  ),
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        textStyle: const TextStyle(
-                          color: Colors.amber,
-                        )),
-                    onPressed: () => print('find password'),
-                    child: const Text('비밀번호 찾기'),
-                  ),
-                ],
-              ),
-            ],
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          textStyle: const TextStyle(
+                            fontSize: 12,
+                          )),
+                      onPressed: () => print('next page'),
+                      child: const Text('회원가입'),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          textStyle: const TextStyle(
+                            fontSize: 12,
+                          )),
+                      onPressed: () => print('next page'),
+                      child: const Text('아이디 찾기'),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          textStyle: const TextStyle(
+                            fontSize: 12,
+                          )),
+                      onPressed: () => print('find password'),
+                      child: const Text('비밀번호 찾기'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           )
         ]),
       ),
